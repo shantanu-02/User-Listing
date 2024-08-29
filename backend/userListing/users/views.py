@@ -11,7 +11,6 @@ from django.db.models import Q
 
 class FetchAndStoreUserData(APIView):
     def get(self, request, *args, **kwargs):
-        # External API URL
         external_api_url = 'https://randomuser.me/api/?results=2'
         external_response = requests.get(external_api_url)
 
@@ -35,7 +34,7 @@ class FetchAndStoreUserData(APIView):
                     'timezone_description': user_data['location']['timezone']['description'],
                     'email': user_data['email'],
                     'username': user_data['login']['username'],
-                    'password': user_data['login']['password'],  # Ideally, you'd hash passwords
+                    'password': user_data['login']['password'],
                     'dob': user_data['dob']['date'],
                     'registered': user_data['registered']['date'],
                     'phone': user_data['phone'],
@@ -63,11 +62,12 @@ class UserListView(generics.ListAPIView):
 class UserDetailView(generics.RetrieveAPIView):
     queryset = Users.objects.all()
     serializer_class = usersSerializer
-    lookup_field = 'id'  # Use 'id' as the URL parameter for single user lookup
+    lookup_field = 'id'
 
 class UserSearchView(generics.ListAPIView):
     queryset = Users.objects.all()
     serializer_class = usersSerializer
+    pagination_class = PageNumberPagination
     
     def get_queryset(self):
         queryset = Users.objects.all()
@@ -78,6 +78,8 @@ class UserSearchView(generics.ListAPIView):
                     Q(id__icontains=query) |
                     Q(first_name__icontains=query) |
                     Q(last_name__icontains=query) |
+                    Q(cell__icontains=query) |
+                    Q(email__icontains=query) |
                     Q(gender=query)
                 )
         return queryset
