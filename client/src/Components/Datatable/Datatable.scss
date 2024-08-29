@@ -1,0 +1,38 @@
+.container {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .user-table th,
+  .user-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+    background-color: white;
+    color: #4a4a4a;
+  }
+  
+  .user-table th {
+    background-color: white;
+    color: #4a4a4a;
+  }
+  
+  .user-table tr:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .imageData {
+    border-radius: 50%;
+    object-fit: contain;
+  }

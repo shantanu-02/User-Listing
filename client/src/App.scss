@@ -1,0 +1,26 @@
+* {
+  background-color: #2a3447;
+}
+
+.pagination{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  button{
+    margin: 0.5rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10%;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+
+  .active{
+    background-color: black;
+    color: white;
+  }
+}

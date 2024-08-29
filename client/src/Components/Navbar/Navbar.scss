@@ -1,0 +1,55 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+    // position: fixed;
+    // width: 90%;
+  
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  
+    .searchbar {
+      position: relative;
+  
+      .input {
+        padding: 0.5rem 1rem;
+        width: 22rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+        transition: all 0.3s ease;
+        background-color: white;
+        color: black;
+      }
+  
+      .input:focus {
+        border-color: black;
+        box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
+      }
+    }
+  
+    .addUsers .add-button {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .addUsers .add-button:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+  
