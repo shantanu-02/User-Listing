@@ -1,26 +1,32 @@
-.navbar {
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     color: white;
-    // position: fixed;
-    // width: 90%;
-  
+    position: fixed;
+    top: 0;
+    width: 90%;
+
     .logo {
       font-size: 1.8rem;
       font-weight: 700;
     }
-  
+
     .navbar-actions {
       display: flex;
       align-items: center;
       gap: 1.5rem;
     }
-  
+
     .searchbar {
       position: relative;
-  
+
       .input {
         padding: 0.5rem 1rem;
         width: 22rem;
@@ -28,28 +34,77 @@
         border-radius: 4px;
         outline: none;
         transition: all 0.3s ease;
-        background-color: white;
+        background: white;
         color: black;
       }
-  
+
       .input:focus {
         border-color: black;
         box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
       }
     }
-  
+
     .addUsers .add-button {
-      background-color: white;
+      background: white;
       color: black;
       border: none;
       padding: 0.5rem 1rem;
       border-radius: 4px;
       cursor: pointer;
     }
-  
+
     .addUsers .add-button:hover {
-      background-color: black;
+      background: black;
       color: white;
     }
   }
-  
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    height: auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 100%;
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    .navbar-actions {
+      gap: 1rem;
+    }
+
+    .searchbar .input {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    .addUsers .add-button {
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+
+    .logo {
+      font-size: 1.2rem;
+    }
+
+    .searchbar .input {
+      width: 100%;
+      padding: 0.4rem 0.8rem;
+    }
+
+    .addUsers .add-button {
+      padding: 0.4rem;
+      font-size: 0.875rem;
+    }
+  }
+}

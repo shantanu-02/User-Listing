@@ -1,26 +1,46 @@
 * {
-  background-color: #2a3447;
+  background: #2a3447;
 }
 
-.pagination{
+.pagination {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
 
-  button{
+  button {
     margin: 0.5rem;
-    background-color: white;
+    background: white;
     border: 1px solid black;
     border-radius: 10%;
+    padding: 0.5rem 1rem;
   }
 
-  button:hover{
+  button:hover {
     cursor: pointer;
   }
 
-  .active{
-    background-color: black;
+  .active {
+    background: black;
     color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    font-size: 0.75rem;
+    padding: 0.4rem;
   }
 }

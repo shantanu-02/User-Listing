@@ -1,38 +1,98 @@
 .container {
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
+  background: white;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 100%;
+}
+
+.table-wrapper {
+  max-height: 23rem;
+  overflow-y: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.user-table td,
+.user-table th {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  background: white;
+  color: #4a4a4a;
+}
+
+.user-table th {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.user-table tr:hover td {
+  background: #efefef;
+  transition: background 0.2s ease;
+}
+
+.user-table tr:hover {
+  cursor: pointer;
+}
+
+.imageData {
+  border-radius: 50%;
+  object-fit: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.highlight {
+  font-weight: bold;
+  background: white;
+  color: rgb(38, 255, 0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+    max-width: 100%;
   }
-  
-  .user-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-  }
-  
+
   .user-table th,
   .user-table td {
-    border-bottom: 1px solid #ddd;
-    padding: 0.75rem;
-    text-align: left;
-    background-color: white;
-    color: #4a4a4a;
+    padding: 0.5rem;
+    font-size: 0.875rem;
   }
-  
-  .user-table th {
-    background-color: white;
-    color: #4a4a4a;
-  }
-  
-  .user-table tr:hover {
-    background-color: white;
-    cursor: pointer;
-  }
-  
+
   .imageData {
-    border-radius: 50%;
-    object-fit: contain;
+    width: 20px;
+    height: 20px;
   }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.25rem;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .user-table th,
+  .user-table td {
+    white-space: nowrap;
+  }
+
+  .imageData {
+    width: 15px;
+    height: 15px;
+  }
+}
