@@ -1,3 +1,21 @@
+# Backend
+# Virtual environment
+.venv/
+env/
+
+# SQLite database file
+db.sqlite3
+
+# Compiled Python files
+__pycache__/
+*.py[cod]
+
+# Django Secret Key File
+.env
+
+
+
+# Client
 # Logs
 logs
 *.log
@@ -7,6 +25,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node modules and build directories
 node_modules
 dist
 dist-ssr
