@@ -6,13 +6,18 @@
 
 This project is a Django-based application that fetches user data from an external API, stores it in a local database, and provides endpoints to list, search, and retrieve user information.
 
-#### Features
+## Features
 
 - Fetch random user data from an external API.
 - Store user data in a local database.
 - List all users with pagination.
 - Search users by various fields.
 - Retrieve detailed information for a specific user.
+
+## Optimization techniques
+
+- DB indexing: Implemented database indexing to optimize user search queries.
+- Debouncing: Implemented a debounce function for search functionality to reduce the number of database queries.
 
 ## Prerequisites
 
@@ -74,8 +79,8 @@ python manage.py runserver
 #### Get Single User Details
 - To retrieve details for a specific user:
 - Method: GET
-- URL: http://127.0.0.1:8000/users/id/
-- (Replace id with the user's ID.)
+- URL: http://127.0.0.1:8000/users/<user_id>/
+- (Replace <user_id> with the user's ID.)
 
 ## API Endpoints
 
@@ -85,7 +90,7 @@ python manage.py runserver
 #### Endpoint: /users/fetch-random-users/
 - Fetch and store random user data.
   
-#### Endpoint: /users/<id>/
+#### Endpoint: /users/<user_id>/
 - Retrieve details for a specific user.
   
 #### Endpoint: /search/?query=<search_term>
