@@ -2,7 +2,7 @@
 
 # Documentation
 
-## User Listing Project Backend
+## User Listing Project
 
 This project is a Django-based application that fetches user data from an external API, stores it in a local database, and provides endpoints to list, search, and retrieve user information.
 
