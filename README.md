@@ -154,7 +154,7 @@ cd client
 - You will get the users data sorted on that specific field.
 - Above image shows the data sorted on `last-name`.
 
-### 3.3. User detail using inner navigation
+### 3.4. User detail using inner navigation
 
 ![image](https://github.com/shantanu-02/User-Listing/blob/main/client/public/Assets/User_single.PNG)
 
