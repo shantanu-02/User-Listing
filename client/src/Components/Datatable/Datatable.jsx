@@ -117,7 +117,7 @@ function Datatable({ searchResults, userData, searchValue }) {
                   </td>
                   <td>{highlightText(user.first_name, searchValue)}</td>
                   <td>{highlightText(user.last_name, searchValue)}</td>
-                  <td>{user.gender}</td>
+                  <td>{highlightText(user.gender, searchValue)}</td>
                   <td>{highlightText(user.cell, searchValue)}</td>
                   <td>{highlightText(user.email, searchValue)}</td>
                 </tr>
